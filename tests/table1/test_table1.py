@@ -29,7 +29,7 @@ def test_null_validation(read_data,read_config):
     null_cols = read_config['validations']['null_check']['null_columns']
     status = null_value_check(target,null_cols)
     assert status == 'PASS'
-
+ 
 def test_unique_check(read_data,read_config):
     source,target = read_data
     read_config = read_config

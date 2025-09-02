@@ -1,0 +1,21 @@
+count_check: PASS
+Details: count is matching between source and target
+
+duplicate_validation: FAIL
+Details: duplicate validation failed with records [Row(first_name='John', count=2), Row(first_name='Jane', count=2)] and those are [{'first_name': 'John', 'count': 2}, {'first_name': 'Jane', 'count': 2}]
+
+null_validation: FAIL
+Details: failed records are :[{'null_columns': 'first_name', 'null_failure_count': 1, 'null values': [{'customer_id': Decimal('11'), 'first_name': '', 'last_name': 'Miller', 'email': 'sarah.miller@example.com', 'created_at': datetime.datetime(2025, 3, 6, 21, 40)}]}]
+
+uniqueness_check:: has been FAIL
+Details: duplicate counts for columns are {'customer_id': 0, 'first_name': 2, 'last_name': 1}
+
+data_compare_check: PASS
+Details: there are no data discrepancy
+
+scheck Check: PASS
+Details: Schema is correct!
+
+data_compare_check: PASS
+Details: there are no data discrepancy
+

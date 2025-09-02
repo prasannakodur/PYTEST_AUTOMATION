@@ -1,9 +1,16 @@
 import datetime
 import os
 
-dir_path = r'C:\Users\PRASANNA\PycharmProjects\taf_automation\report'
-print(dir_path)
-print('hi')
+current_path = os.path.abspath(__file__)
+print("the current filepath is :",current_path)
+
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_path)))
+print("the project root path is :", project_root)
+
+dir_path = project_root +'\\report'
+# dir_path = r'C:\Users\PRASANNA\PycharmProjects\taf_automation\report'
+print("the report dir path is :",dir_path)
+
 os.makedirs(dir_path,exist_ok=True)
 # Ensure the 'report' directory exists
 # report_dir = "/Users/admin/PycharmProjects/taf/report"
