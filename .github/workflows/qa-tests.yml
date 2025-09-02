@@ -30,4 +30,4 @@ jobs:
 
       - name: Run tests
         run: |
-          echo "Replace me with your test command (e.g., pytest -q)"
+          pytest -q
